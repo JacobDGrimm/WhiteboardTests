@@ -19,7 +19,7 @@ namespace WhiteBoardTests
 
             for (int i = 0; i < numarr.Length; i++)
             {
-                if (numarr[i] % 2 == 0)
+                if (numarr[i] % 2 == 0) // simple check to see if the number being indexed is even
                 {
                     sum += numarr[i];
                 }
@@ -36,7 +36,7 @@ namespace WhiteBoardTests
 
             char[] arr = input.ToCharArray();
 
-            bool notFirst = false;
+            bool notFirst = false; 
 
             for (int i = 0; i < arr.Length; i++)
             {
@@ -44,7 +44,7 @@ namespace WhiteBoardTests
                 {
                     if (notFirst == true)
                     {
-                        arr[i] = ' ';
+                        arr[i] = ' '; // replaces all subsequent $ after the first with an empty character
                     }
                     notFirst = true;
                 }
@@ -62,7 +62,7 @@ namespace WhiteBoardTests
             int pnum = 0; // this is the previous number it starts set to zero because the first number before one is zero
             int ncount = 1; // this is a counter
 
-            while(ncount < n)
+            while(ncount < n) // I wanted to use a while loop because I don't use them that often
             {
                 num += pnum;
                 pnum = onum;
